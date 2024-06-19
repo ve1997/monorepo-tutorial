@@ -4,16 +4,20 @@
 		"enabled": true
 	},
 	"files": {
-		"ignore": ["node_modules/**/*"]
+		"ignore": [".next/**/*", "app/node_modules/**/*"]
 	},
 	"linter": {
 		"enabled": true,
 		"rules": {
 			"recommended": true,
 			"correctness": {
+				"useHookAtTopLevel": "error",
 				"noUndeclaredVariables": "error",
 				"noUnusedImports": "warn",
 				"noUnusedVariables": "warn"
+			},
+			"nursery": {
+				"useSortedClasses": "warn"
 			}
 		}
 	}
